@@ -39,8 +39,6 @@ RUN apt-get update \
 	&& wget $KAFKA_DIST \
 	&& apt-get remove -y --purge $SETUP_TOOLS \
 	&& apt-get autoremove -y \
-	&& rm -rf /app/g \
-	&& mkdir /app
-
+	&& rm -rf /app/g
 
 CMD ["/bin/bash", "/app/kafka-mesos.sh", "scheduler"]
