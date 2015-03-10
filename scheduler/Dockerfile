@@ -7,7 +7,7 @@ WORKDIR /app
 # The dependencies needed for the compilation process, they will be deleted once the docker image is baked
 ENV SETUP_TOOLS="git curl unzip autoconf libtool automake build-essential gettext python"
 ENV KAFKA_DIST="https://archive.apache.org/dist/kafka/0.8.1.1/kafka_2.9.2-0.8.1.1.tgz"
-ENV GRADLE_DIST="https://services.gradle.org/distributions/gradle-2.3-all.zip"
+ENV GRADLE_DIST="https://downloads.gradle.org/distributions/gradle-2.3-all.zip"
 ENV GRADLE_HOME=/opt/gradle-2.3-all
 
 # Paths
