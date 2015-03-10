@@ -23,10 +23,10 @@ RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | te
 	&& echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee -a /etc/apt/sources.list.d/webupd8team-java.list \
 	&& apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886 \
 	&& apt-get update \
-	&& apt-get install oracle-java8-installer -y && apt-get clean
+	&& apt-get install oracle-java8-installer -y  --force-yes \
+	&& apt-get clean
 
-# OpenJDK JRE that we shall keep 
-RUN apt-get -y install openjdk-7-jre-headless --no-install-recommends --no-install-suggests
+# Install Kafka 
 RUN apt-get update \
 	&& apt-get install -y $SETUP_TOOLS \
 	&& mkdir /app/g \
